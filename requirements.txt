@@ -1,0 +1,14 @@
+cvxopt==1.2.5
+matplotlib==3.3.0
+numpy==1.19.1
+opencv-python==4.2.0.34
+pandas==1.0.3
+POT==0.7.0
+pydub==0.24.1
+scikit-image==0.16.2
+scikit-learn==0.22.2.post1
+scipy==1.5.2
+seaborn==0.10.0
+tqdm==4.46.0
+librosa==0.8.0
+libtlda==0.1.5
