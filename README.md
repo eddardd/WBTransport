@@ -3,7 +3,7 @@
 This repository contains the code used on the experiments of the paper:
 
 Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula, "Wasserstein Barycenter Transport for Domain Adaptation", International
-Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021. (To appear)
+Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021.
 
 # Intuition
 ![alt text](./Figures/ex_wbt.png)
@@ -63,5 +63,13 @@ scripts provided in this repo.
 If you find this work useful in your research, please consider citing us using the bibtex below,
 
 ```
-...
+@INPROCEEDINGS{montesuma2021,
+  author={Montesuma, Eduardo F. and Ngolè Mboula, Fred-Maurice},
+  booktitle={ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Wasserstein Barycenter Transport for Acoustic Adaptation}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={3405-3409},
+  doi={10.1109/ICASSP39728.2021.9414199}}
 ```
