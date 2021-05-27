@@ -3,7 +3,7 @@
 This repository contains the implementation of the so-called Wasserstein Barycenter Transport Algorithm, explored in the following publications,
 
 Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula, "Wasserstein Barycenter Transport for Domain Adaptation", International
-Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021.
+Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021. [[IEEE Explore]](https://ieeexplore.ieee.org/document/9414199)
 
 Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula (2021, June). Wasserstein Barycenter Transport for Multi-Source Domain Adaptation. In 2021 IEEE conference on computer vision and pattern recognition (to appear)
 
