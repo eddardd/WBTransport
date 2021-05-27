@@ -115,8 +115,10 @@ if task == "MGR" or task == "MSD":
     # For MGR and MSD only.
     # We drop the 17th column because it is constant and equal to zero.
     X = np.delete(X, 17, axis=1)
-# Normalize data
+# Feature Scaling
 X = (X - np.min(X, axis=0)) / (np.max(X, axis=0) - np.min(X, axis=0))
+# Using standardization improves overall results, but the reported accuracies were acquired using
+# feature scaling.
 # X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 # Class and domain labels
 y = dataset[:, -2]
