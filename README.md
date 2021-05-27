@@ -1,16 +1,23 @@
 # Wasserstein Barycenter Transport for Acoustic Adaptation
 
-This repository contains the code used on the experiments of the paper:
+This repository contains the implementation of the so-called Wasserstein Barycenter Transport Algorithm, explored in the following publications,
 
 Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula, "Wasserstein Barycenter Transport for Domain Adaptation", International
 Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021.
+
+Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula (2021, June). Wasserstein Barycenter Transport for Multi-Source Domain Adaptation. In 2021 IEEE conference on computer vision and pattern recognition (to appear)
+
+# News
+
+* 27/05/2021: GPU implementation for the Wasserstein Barycenter Transport/Sinkhorn algorithm is now available using torch. This implementation is preferred as it speeds up computation.
+* 13/05/2021: ICASSP publication is on IEEE Explore. Access is free for a month.
 
 # Intuition
 ![alt text](./Figures/ex_wbt.png)
 
 # Modules
 
-In this repo we provide a single package that implements all tested domain adaptation algorithms. Especially, TCA and KMM were implemented using [libtlda](https://github.com/wmkouw/libTLDA) and OT-related methods were implemented through the [POT](https://pythonot.github.io/) toolbox. The implementations can be found in the ./msda folder.
+In this repo we provide a single package that implements all tested domain adaptation algorithms. Especially, TCA and KMM were implemented using the [libtlda](https://github.com/wmkouw/libTLDA) toolbox and OT-related methods were implemented through the [POT](https://pythonot.github.io/) toolbox. The implementations can be found in the ./msda folder.
 
 # Data
 
@@ -24,6 +31,14 @@ scripts provided in this repo.
 ## Music Genre Recognition
 1. GTZAN Music Genre Recognition [Source](http://marsyas.info/downloads/datasets.html) [Direct Link](opihi.cs.uvic.ca/sound/genres.tar.gz)
 2. Noise Dataset [Source](http://spib.linse.ufsc.br/noise.html)
+
+## Face Recognition
+1. Caltech-Office Decaf features [Source](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md) [Direct Link](https://mega.nz/folder/QDxBBC4J#LizxWbE1_JEwPSrA2mrrrw)
+
+## Object Recognition
+1. PIE Dataset [Source](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md#pie)
+
+__NOTE:__ on the ICASSP publication we explore solely Music-Speech Discrimination and Music-Genre Recognition. In the CVPR publication, we explore all four.
 
 # Results
 
@@ -56,7 +71,6 @@ scripts provided in this repo.
 | WBT          | 56.88 ± 9.54                   | 56.63 ± 6.88                   | 56.63 ± 6.56                 | 59.38 ± 2.61                   |
 | WBT<sub>reg</sub>  | **96.42** ± **1.48** | **92.79** ± **2.95** | <ins>93.75 ± 0.97</ins>     | **95.31** ± **1.11** |
 | Target-only  | 90.51 ± 3.98                   | 93.07 ± 3.81                   | 89.23 ± 4.25                 | 92.30 ± 3.62                   |
-
 
 # Citation
 
