@@ -6,11 +6,14 @@ from ot.bregman import sinkhorn
 from msda.utils import barycentric_mapping
 from msda.utils import semisupervised_penalty
 
+from msda.ot_gpu import sinkhorn_gpu
+
 
 def sinkhorn_barycenter(mu_s, Xs, Xbar, ys=None, ybar=None, reg=1e-3, b=None, weights=None,
                         method="sinkhorn", norm="max", metric="sqeuclidean", numItermax=100,
                         numInnerItermax=1000, stopThr=1e-4, verbose=False, innerVerbose=False,
-                        log=False, line_search=False, limit_max=np.infty, callbacks=None, **kwargs):
+                        log=False, line_search=False, limit_max=np.infty, callbacks=None,
+                        implementation='torch', device='cuda:0', **kwargs):
     r"""Compute the entropic regularized Wasserstein barycenter of distributions
     in :math:`\mu_{s}`. This function solves the follwing optimization problem:
 
@@ -102,7 +105,10 @@ def sinkhorn_barycenter(mu_s, Xs, Xbar, ys=None, ybar=None, reg=1e-3, b=None, we
             Mi = ot.utils.cost_normalization(Mi, norm=norm)
             if ys is not None and ybar is not None:
                 Mi = semisupervised_penalty(ys=ys[i], yt=ybar, M=Mi, limit_max=limit_max)
-            T_i = sinkhorn(mu_s[i], b, Mi, reg, numItermax=numInnerItermax, verbose=innerVerbose, **kwargs)
+            if implementation == 'torch':
+                T_i = sinkhorn_gpu(mu_s[i], b, Mi, reg, numItermax=numInnerItermax, device=device)
+            else:
+                T_i = sinkhorn(mu_s[i], b, Mi, reg, numItermax=numInnerItermax, verbose=innerVerbose, **kwargs)
             transport_plans.append(T_i.T)
         T_sum = sum([
             wi * barycentric_mapping(Xt=Xsi, coupling=Ti) for wi, Ti, Xsi in zip(weights, transport_plans, Xs)

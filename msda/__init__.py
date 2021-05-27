@@ -1,4 +1,5 @@
 from .utils import *
+from .ot_gpu import *
 from .barycenters import sinkhorn_barycenter
 from .wbt import WassersteinBarycenterTransport
 from .classification import MultiSourceOTDAClassifier
