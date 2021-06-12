@@ -2,10 +2,10 @@
 
 This repository contains the implementation of the so-called Wasserstein Barycenter Transport Algorithm, explored in the following publications,
 
+Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula (2021, June). Wasserstein Barycenter Transport for Multi-Source Domain Adaptation. In 2021 IEEE conference on computer vision and pattern recognition. [[Paper]](https://openaccess.thecvf.com/content/CVPR2021/papers/Montesuma_Wasserstein_Barycenter_for_Multi-Source_Domain_Adaptation_CVPR_2021_paper.pdf) [[Supplementary]](https://openaccess.thecvf.com/content/CVPR2021/supplemental/Montesuma_Wasserstein_Barycenter_for_CVPR_2021_supplemental.pdf)
+
 Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula, "Wasserstein Barycenter Transport for Domain Adaptation", International
 Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021. [[IEEE Explore]](https://ieeexplore.ieee.org/document/9414199)
-
-Eduardo F. Montesuma, Fred-Maurice Ngolè Mboula (2021, June). Wasserstein Barycenter Transport for Multi-Source Domain Adaptation. In 2021 IEEE conference on computer vision and pattern recognition (to appear)
 
 # News
 
@@ -25,17 +25,21 @@ You can either use pre-extracted featuers (available on ./data folder) or downlo
 scripts provided in this repo.
 
 ## Music-Speech Discrimination
+
 1. Music Speech Recognition [Source](http://marsyas.info/downloads/datasets.html) [Direct Link](opihi.cs.uvic.ca/sound/music_speech.tar.gz)
 2. Noise Dataset [Source](http://spib.linse.ufsc.br/noise.html)
 
 ## Music Genre Recognition
+
 1. GTZAN Music Genre Recognition [Source](http://marsyas.info/downloads/datasets.html) [Direct Link](opihi.cs.uvic.ca/sound/genres.tar.gz)
 2. Noise Dataset [Source](http://spib.linse.ufsc.br/noise.html)
 
 ## Face Recognition
+
 1. Caltech-Office Decaf features [Source](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md) [Direct Link](https://mega.nz/folder/QDxBBC4J#LizxWbE1_JEwPSrA2mrrrw)
 
 ## Object Recognition
+
 1. PIE Dataset [Source](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md#pie)
 
 __NOTE:__ on the ICASSP publication we explore solely Music-Speech Discrimination and Music-Genre Recognition. In the CVPR publication, we explore all four.
@@ -76,8 +80,23 @@ __NOTE:__ on the ICASSP publication we explore solely Music-Speech Discriminatio
 
 If you find this work useful in your research, please consider citing us using the bibtex below,
 
+## CVPR
+
 ```
-@INPROCEEDINGS{montesuma2021,
+@InProceedings{montesuma2021cvpr,
+    author    = {Montesuma, Eduardo Fernandes and Mboula, Fred Maurice Ngole},
+    title     = {Wasserstein Barycenter for Multi-Source Domain Adaptation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {16785-16793}
+}
+```
+
+## ICASSP
+
+```
+@INPROCEEDINGS{montesuma2021icassp,
   author={Montesuma, Eduardo F. and Ngolè Mboula, Fred-Maurice},
   booktitle={ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
   title={Wasserstein Barycenter Transport for Acoustic Adaptation}, 
