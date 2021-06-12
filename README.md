@@ -9,6 +9,7 @@ Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2021. [[IEEE Exp
 
 # News
 
+* 12/06/2021: CVPR publication is available at the CVF repository.
 * 27/05/2021: GPU implementation for the Wasserstein Barycenter Transport/Sinkhorn algorithm is now available using torch. This implementation is preferred as it speeds up computation.
 * 13/05/2021: ICASSP publication is on IEEE Explore. Access is free for a month.
 
