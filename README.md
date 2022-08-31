@@ -1,4 +1,4 @@
-# Wasserstein Barycenter Transport for Acoustic Adaptation
+# Wasserstein Barycenter Transport for Multi-Source Domain Adaptation
 
 This repository contains the implementation of the so-called Wasserstein Barycenter Transport Algorithm, explored in the following publications,
 
